@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require('cors');
+const port = process.env.PORT || 8000;
 
 const app = express();
 app.use(cors());
@@ -12,6 +13,6 @@ const getVideo = (req, res) => {
 
 app.get("/video", getVideo);
 
-app.listen(8000, () => {
-  console.log("server is running at http://localhost:8000");
+app.listen(port, () => {
+  console.log("server is running");
 });
