@@ -7,7 +7,7 @@ app.use(cors());
 const s3VideoUrl = 'https://subham-project-bucket.s3.ap-south-1.amazonaws.com/Roller+Coaster.mp4';
 
 const getVideo = (req, res) => {
-  return res.json({ status: true, url: s3VideoUrl });
+  return res.json({ success: true, url: s3VideoUrl });
 }
 
 app.get("/video", getVideo);
